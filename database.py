@@ -12,8 +12,12 @@ from sqlalchemy.ext.declarative import declarative_base
 # engine = create_engine(POSTGRESQL_DATABASE_URL)
 
 # For Mysql
-MYSQL_DATABASE_URL = 'mysql+pymysql://root:Ss9079581918@127.0.0.1:3306/TodoApplicationDatabase'
-engine = create_engine(MYSQL_DATABASE_URL)
+# MYSQL_DATABASE_URL = 'mysql+pymysql://root:Ss9079581918@127.0.0.1:3306/TodoApplicationDatabase'
+# engine = create_engine(MYSQL_DATABASE_URL)
+
+# For Productiondatabase
+PRODUCTION_DATABASE_URL = 'postgresql://civksdyf:Go3OgtyrzQ4xAtA2HSZD0e7cFawlnIAd@bubble.db.elephantsql.com/civksdyf'
+engine = create_engine(PRODUCTION_DATABASE_URL)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
